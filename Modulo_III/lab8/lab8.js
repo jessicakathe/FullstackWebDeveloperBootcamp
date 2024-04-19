@@ -12,4 +12,5 @@ function sayHelloOne(name)  {
     return `Hello, ${name}`
 };
 
+
 console.log(`Function Declaration sayHello: ${sayHelloOne("Bootcamp 2024")}`);
