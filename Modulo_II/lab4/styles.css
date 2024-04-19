@@ -1,0 +1,36 @@
+/* Define font for project*/
+/*/ <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+.roboto-condensed-uniquifier {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+
+  .box {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 600px;
+    background-color: #cdc;
+    text-align: justify;
+  }
+  
+  /* Define Styles for web application*/
+
+  #container {
+    background-color: #aeaeae;
+    width: 765px;
+    padding: 200px; /*medida estandar que se usa*/
+    margin: 8px;
+    border: 3px groove #ccc;
+    box-shadow: currentColor;
+    border-radius: 10px;
+  }
+
+  .initial-header {
+    margin: 5px;
+    border: 2px dotted #ccc;
+    padding: 1px;
+}

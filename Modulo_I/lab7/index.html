@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML: Form and input Tags -->
+    <meta charset="UTF-8">
+    <title>HTML5 Form Example</title>
+</head>
+<body>
+
+    <!-- Example of form tag -->
+    <form action="/submit-form" method="post">
+        <!-- Example of label and input tags -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Example of label and input tags -->
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <br>
+        <!-- Example of textarea tag -->
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+
+        <!-- Example of select, optgroup, and option tags -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <optgroup label="North America">
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+            </optgroup>
+            <optgroup label="Europe">
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+            </optgroup>
+        </select>
+
+        <!-- Example of fieldset and legend tags -->
+        <fieldset>
+            <legend>Gender:</legend>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+        </fieldset>
+
+        <!-- Example of datalist tag -->
+        <label for="browser">Choose your browser from the list:</label>
+        <input list="browsers" id="browser" name="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+        </datalist>
+
+        <!-- Example of button tag -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

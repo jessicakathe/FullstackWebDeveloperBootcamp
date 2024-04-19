@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #007400;
+    --secondary-color: #005470;
+}
+
+.my-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color is ease
+}
+
+.my-button:hover {
+ background-color: var(--secondary-color);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML: Image Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Image Tags Example</title>
+</head>
+<body>
+
+    <!-- Example of SVG tag -->
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg> 
+
+    <!-- Example of figure and figcaption tags -->
+    <figure>
+        <img src="https://imagenes.heraldo.es/files/image_1920_1080/uploads/imagenes/2019/11/15/memes-9.jpeg" alt="Description of the image">
+        <figcaption>This is a caption for the image.</figcaption>
+    </figure>
+
+    <!-- Example of picture tag -->
+    <picture>
+        <source media="(min-width: 650px)" srcset="https://static01.nyt.com/images/2022/01/31/crosswords/31meme-wordplay/31meme-wordplay-articleLarge.png?quality=75&auto=webp&disable=upscale">
+        <source media="(min-width: 465px)" srcset="https://phantom-marca-mx.unidadeditorial.es/f71199309ed44fe0401b0a6351c89803/resize/660/f/webp/mx/assets/multimedia/imagenes/2023/12/12/17023578484660.jpg">
+        <img src="https://phantom-marca-mx.unidadeditorial.es/f71199309ed44fe0401b0a6351c89803/resize/660/f/webp/mx/assets/multimedia/imagenes/2023/12/12/17023578484660.jpg" alt="Description of the image">
+    </picture>
+
+    <!-- Example of map and area tags -->
+    <img src="path-to-your-image-map.jpg" alt="Map Description" usemap="#image-map">
+    <map name="image-map">
+        <area shape="rect" coords="34,44,270,350" alt="Area Description" href="link-to-some-location.html">
+    </map>
+
+    <!-- Example of canvas tag -->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script>
+        // Example of using JavaScript to draw on the canvas
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
+    </script>
+
+</body>
+</html>

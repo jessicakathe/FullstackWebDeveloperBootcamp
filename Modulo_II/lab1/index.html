@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML comment--> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* universal Selector */
+        *   {
+            font-family: Arial, Helvetica, sans-serif;
+            color: violet;
+        }
+        /* Element Selector */
+        p {
+            color: blue;
+        }
+
+        /* ID Selector */
+        /* CSS siempre colocar ; al final para que no de error*/
+
+        #special {
+            font-weight: bold;
+        }
+
+        /* Class Selector */
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* Descendent Selector */
+        div p {
+            margin: 60px;
+        }
+
+        /* Descendent with class Selector */
+        div .other {
+            margin: 80px;  
+        }
+        /* grouping Selector, have a lot of care beacuse in CSS you can overwrite the characteristics you select */
+        h1, h2, h3 {
+            text-align: center;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* pseudo-class Selector */
+        a:hover {
+            color: rgb(255, 162, 0);
+        }
+
+        p::first-letter {
+            font-size: 15pt;
+        }
+
+        /* Attribute Selector */
+        [data-info] {
+            border: 1px solid black;
+        }
+        [data-any] {
+            border: 1px, solid rgb(91, 21, 48);
+        }
+
+                /* Child Combinator */
+                div > p {
+                    color: green;
+                }
+        
+                /* Adjacent Sibling Combinator */
+                h1 + p {
+                    font-size: 18px;
+                }
+        
+                /* General Sibling Combinator */
+                h1 ~ p {
+                    line-height: 1.5;
+                }
+    </style>
+</head>
+<body>
+    <section>
+        <h1> the title</h1>
+        <h2> the title</h2>
+        <h3> the title</h3>
+        <div>
+            <p>Lorem Ipsum</p>
+            <p id="special">This paragrah is styled with id selector</p> 
+            <p class="other">This paragrah is styled with id selector</p>    
+        </div>
+        <p class="highlight">This paragraph is styled with class selector </p>
+
+        <a href=""> Hola Bootcamp</a>
+        <article>
+            <p 
+            data-info="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil velit maxime tempora possimus aspernatur voluptatem molestias rerum quia debitis exercitationem error, magnam consequuntur corrupti, odio molestiae. Quasi, corporis reiciendis? 
+            </p>
+            
+        </article>
+        <p data-any="true">This paragraph is styled with attribute selector.</p>
+
+        <span data-any="true">
+            lorem bootcamp
+        </span>
+        
+    </section>
+</body>
+</html>

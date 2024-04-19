@@ -1,0 +1,43 @@
+/* Set basic styles for the entire page*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex; /* */
+    /*flex-direction: row;*/
+    background-color: brown;
+    padding: 20px;
+}
+/* todo lo que está contenido va a tener la característica de flex*/
+
+.column {
+    background-color: rgb(229, 236, 219);
+    border: 2px;
+    padding: 2px;
+    margin: 2px;
+    box-shadow: inset;
+    text-align: justify;
+}
+
+/*diferent box model for each box*/
+
+
+.box1 {
+    margin: 5px;
+    border: 2px dotted #ccc;
+    padding: 1px;
+}
+.box2 {
+    color: #241bd5;
+    margin: 5px;
+    border: 2px dashed #aaa;
+    padding: 1px;
+}
+
+.box3 {
+    margin: 20px;
+    border: 6px double #888;
+    padding: 1px;
+}

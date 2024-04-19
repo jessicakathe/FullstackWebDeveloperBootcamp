@@ -1,0 +1,20 @@
+
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: #221740;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: movement;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+}
+
+/* una "función" de CSS */
+@keyframes movement {
+    0% {top: 90%}
+    50% {top: 10%}
+    100% {top: 90%}
+}
