@@ -7,7 +7,8 @@
 // URL of the Json
 const url = 'https://api.github.com/users/mojombo/followers';
 
-//promesa - use fetch to get the data
+//promesa - use fetch to get the data, post , put.
+
 fetch(url)
 .then(
     response => {

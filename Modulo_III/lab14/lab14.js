@@ -4,30 +4,63 @@
  *     @licence BSD 3-Clause License
  */
 
-function promise1() {
-  return new Promise((resolve, reject)=> {
-    setTimeout(() => {
-      resolve('Promise 1 resolved')
-    }, 2000);
-  });
+// declaration vars
+let email = null;
+let firstname = null;
+let lastName = null;
+let phone = null;
+let password = null;
+let user = {};
+const COUNTRY_CODE = "+57";
+
+/**
+ * @method
+ * @param word
+ * @returns {string|null}
+ * @description this method use for capitalize a word
+ */
+const wordToCapitalize = word => {
+    let toCapitalize = null;
+    if (word !== null && word !== undefined && word.length > 0) {
+        toCapitalize = word[0].toUpperCase() + word.slice(1);
+    }
+    debugger
+    return toCapitalize;
 };
 
-function promise2(message) {
-  return new Promise((resolve, reject)=> {
-    setTimeout(() => {
-      resolve(message + ' -> Promise 2 resolved')
-    }, 2000);
-  });
+/**
+ * @method
+ * @param word
+ * @returns {string|undefined}
+ * @description this method use for encoded a word in base64
+ */
+const encodeBase64 = word => {
+    let encodedStringBtoA = undefined;
+    if (word !== null && word !== undefined && word.length > 0) {
+        encodedStringBtoA = btoa(word);
+    }
+    debugger
+    return encodedStringBtoA;
 };
 
-promise1()
-  .then(result => {
-    console.groupCollapsed("Estoy aqui")
-  return promise2(result);
-  })
-  .then(finaResult =>{
-    console.log(finaResult); //will print
-  }).catch(error=> {
-    console.error('Error:', error);
-  }   
-);
+/**
+ * @method
+ * @param data
+ * @returns {Object|null}
+ * @description this method use for build data for send to server
+ */
+const buildData = data => {
+    let buildData = null;
+
+    if (data !== null && data !== undefined) {
+        buildData = {
+            email: data.email,
+            firstname: data.firstname,
+            last_name: data.lastName,
+            phone: `${COUNTRY_CODE}${data.phone}`,
+            password: data.password
+        }
+    }
+    debugger
+    return buildData;
+};
