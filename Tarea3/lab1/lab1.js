@@ -36,3 +36,7 @@ let text = "";
 users.forEach((valor, indice, array) => {
     console.log("En el índice " + indice + " hay este valor: " + JSON.stringify(valor));
 });
+
+users.forEach((valor, indice, array) => {
+    console.log(valor);
+});
