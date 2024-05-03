@@ -1,0 +1,127 @@
+openapi: 3.0.3
+info:
+  title: Swagger for ProductWeb
+  version: 1.1.2
+  description: Swagger for API of ProductWeb
+  contact:
+    email: alejo8591@gmail.com
+    name: Alejandro Romero
+    url: 'https://github.com/alejo8591'
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+servers:
+  - url: 'http://localhost:3000/api/v1'
+tags:
+  - name: users
+    description: Operations about users
+paths:
+  /users:
+    get:
+      tags:
+        - users
+      summary: Get all users
+      description: Get all users in the platform.
+      operationId: getAllUsers
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UsersDetailResponse'
+        '401':
+          description: Invalid token
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/UnauthorizedError'
+        '404':
+          description: User not found
+          content: { }
+  /users/create:
+    post:
+      tags:
+        - users
+      summary: Create user
+      description: This can only be done by the logged in user.
+      operationId: createUser
+      requestBody:
+        description: Created user object
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/UsersCreateRequest'
+        required: true
+      responses:
+        '201':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsersDetailResponse'
+        '400':
+          description: Invalid id supplied
+          content: { }
+        '404':
+          description: User not found
+          content: { }
+components:
+  schemas:
+    UsersDetailResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: User identification
+          format: int64
+        firstname:
+          type: string
+          description: User firstname
+        lastname:
+          type: string
+          description: User lastname or surname
+        email:
+          type: string
+          description: User email
+        phone:
+          type: string
+          description: User phone max. 10 digits
+        status:
+          type: boolean
+          description: User status
+    UsersCreateRequest:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: User identification
+          format: int64
+        username:
+          type: string
+          description: User alias or username
+        firstname:
+          type: string
+          description: User firstname
+        lastname:
+          type: string
+          description: User lastname or surname
+        email:
+          type: string
+          description: User email
+        phone:
+          type: string
+          description: User phone max. 10 digits
+        password:
+          type: string
+          description: User password between 8 to 20 chars
+    UnauthorizedError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Invalid Token
+security:
+  - bearerAuth: [ ]

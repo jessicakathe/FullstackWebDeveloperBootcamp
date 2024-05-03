@@ -1,7 +1,7 @@
 
 /**  Comentario para documentación
  *  @author Jessica Franco <jessicakathe@gmail.com>
- *  @fileoverview This script use variable declarations and comments
+ *  @fileoverview This script use variable declarations and comments, a json and a foreach loop
  *  @license BSD 3-clause License
 */
 
@@ -33,10 +33,12 @@ let text = "";
 // Shorter Arrow Function
 
 
-users.forEach((valor, indice, array) => {
+/* users.forEach((valor, indice, array) => {
     console.log("En el índice " + indice + " hay este valor: " + JSON.stringify(valor));
-});
+}); */
 
 users.forEach((valor, indice, array) => {
     console.log(valor);
 });
+
+console.log("Imprimiendo los elementos del json con un for each");
