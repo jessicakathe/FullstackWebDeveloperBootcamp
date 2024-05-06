@@ -1,0 +1,62 @@
+
+1. Instalar docker de la URL https://www.docker.com/products/docker-desktop/
+
+2. En cmd, comando para docker crear un container de MongoDB — hace la descarga de MongoDB:
+
+docker run --name=mongobootcamp -d -p 27017:27017 -v "%cd%":/data/db --restart=always mongo
+
+3. Comando para ver el container:
+
+docker container ls
+
+4. comando para ver los volumenes:
+
+docker volume ls
+
+5. comando para instalar una versión muy ligera de windows:
+
+docker exec -it mongobootcamp bash
+
+eso lo deja a uno en un usuario root que es el que tiene más privilegios en la máquina
+
+6. en root correr el comando:
+
+mongosh
+
+para crear la base de datos
+
+7. comando:
+
+show dbs
+
+muestra las bases de datos que vienen por defecto
+
+8. comando:
+
+use mongobootcamp
+
+crea la Base de datos, si no se interactua con ella no se crea, entonces hay que crear collecciones.
+
+9. show collections
+
+no muestra nada si no se han creado.
+
+10. comando para crear collecciones:
+
+db.createCollection('users')
+
+11. comando para crear datos en la base:
+
+ db.users.insertOne({firstname: 'Alejandro', lastname: 'Romero', phone: '333', email: 'yy@gmail.com'})
+
+12. Comando para ver los registros que se han creado:
+
+db.users.find()
+
+13.comando para contar los elementos en la base de datos:
+
+db.users.find().count()
+
+14. comando para actualizar un registro de los que se habían creado:
+
+db.users.updateOne({firstname: 'Alejandro'}, {$set: {firstname: 'jose'}})
